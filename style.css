@@ -1,0 +1,124 @@
+body { 
+    background-color: #f8f8f8; 
+    color: #333; 
+    font-family: "Roboto Mono", monospace; 
+} 
+
+h1{
+    color: blue;
+    text-align: center;
+}
+
+.generator { 
+    background-color: #7a139c; 
+    color: rebeccapurple;
+    width: 250px; 
+    margin: 150px auto; 
+    padding: 20px; 
+    border-radius: 10px; 
+} 
+
+.password { 
+    display: grid; 
+    grid-template-columns: auto min-content; 
+    border-radius: 10px; 
+    overflow: hidden; 
+} 
+
+.password input { 
+    padding: 7px 10px; 
+    background-color: #ddd; 
+    border: 0; 
+    color: #333; 
+} 
+
+button { 
+    background-color: #4caf50; 
+    color: #fff; 
+    text-transform: uppercase; 
+    padding: 5px 15px; 
+    border: 0; 
+    border-radius: 10px; 
+}
+
+.password button { 
+    border-radius: 0; 
+} 
+
+.range { 
+    margin: 10px 0; 
+    display: grid; 
+    grid-template-columns: 1fr min-content; 
+} 
+
+.range span { 
+    background-color: #ddd; 
+    padding: 10px; 
+    margin-left: 20px; 
+    min-width: 30px; 
+    text-align: center; 
+    border-radius: 10px; 
+} 
+
+.options { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px; 
+} 
+
+.options label { 
+    display: block; 
+    background-color: #ddd; 
+    padding: 10px; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    font-family: sans-serif; 
+} 
+.generate { 
+    width: 100%; 
+    margin-top: 10px; 
+    padding: 10px; 
+} 
+
+.generate:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+    transform: scale(1.05);    /* Slight zoom effect */
+    cursor: pointer;          /* Change cursor to pointer */
+}
+
+@media (max-width: 768px) {
+    .generator {
+        width: 90%; /* Ensure it fits smaller screens */
+        margin: 20px auto;
+    }
+
+    .password {
+        grid-template-columns: 1fr auto; /* Adjust layout for narrow screens */
+    }
+
+    .options {
+        grid-template-columns: 1fr; /* Stack options vertically */
+    }
+
+    button {
+        padding: 8px; /* Adjust padding for smaller buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; /* Smaller heading font size */
+    }
+
+    .password input {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+    }
+
+    .range span {
+        font-size: 0.8rem;
+    }
+}
